@@ -8,8 +8,9 @@
     android:columnCount="2"
     android:rowCount="4"
     android:useDefaultMargins="true"
-    tools:context="com.example.jc321013.unitconversion.MainActivity"
-    tools:showIn="@layout/activity_main">
+    tools:context="com.example.jc321013.unitconversion.MainActivity" >
+    <!--tools:showIn="@layout/activity_main"-->
+
     <!--app:layout_behavior="@string/appbar_scrolling_view_behavior"-->
 
 
