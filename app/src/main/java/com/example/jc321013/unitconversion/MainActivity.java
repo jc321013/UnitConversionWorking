@@ -93,6 +93,12 @@ public class MainActivity extends AppCompatActivity
         percentageValue = progress / 100.0;
         percentageText.setText(percentageFormatter.format(percentageValue));
 
+        double percentValue = afterPercentValue * percentageValue;
+
+        meterConversion.setText(unitFormatter.format(percentValue));
+        InchesConversion.setText(unitFormatter.format(percentValue));
+        footConversion.setText(unitFormatter.format(percentValue));
+
 
 
 
