@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/darker_gray"
+    android:columnCount="2"
+    android:rowCount="4"
+    android:useDefaultMargins="true"
+    tools:context="com.example.jc321013.unitconversion.MainActivity"
+    tools:showIn="@layout/activity_main">
+    <!--app:layout_behavior="@string/appbar_scrolling_view_behavior"-->
+
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:background="@color/colorPrimary"
+        android:gravity="end"
+        android:text="Centimeter"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentEnd="true"
+        android:layout_columnWeight="10"
+        android:layout_rowWeight="1"
+        android:background="@android:color/white"
+        android:inputType="textPersonName"
+         />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/editText"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:background="@color/colorPrimary"
+        android:gravity="end"
+        android:text="Meter"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/textView7"
+        android:layout_columnWeight="10"
+        android:layout_rowWeight="1"
+        android:background="@android:color/white"
+
+        android:inputType="textPersonName"
+        />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_columnWeight="1"
+
+        android:layout_rowWeight="1"
+        android:background="@color/colorPrimary"
+
+        android:gravity="end"
+
+        android:text="Inches"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/textView8"
+        android:layout_columnWeight="10"
+        android:layout_rowWeight="1"
+        android:background="@android:color/white"
+
+        android:inputType="textPersonName"
+       />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+
+        android:layout_rowWeight="1"
+        android:background="@color/colorPrimary"
+
+        android:gravity="end"
+
+        android:text="Foot"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/editText4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView9"
+        android:layout_alignParentEnd="true"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:background="@android:color/white"
+        android:elevation="5dp"
+        android:inputType="textPersonName"
+         />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:contextClickable="true"
+        android:text="Submit"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textSize="30sp" />
+
+</GridLayout>
