@@ -3,15 +3,35 @@ package com.example.jc321013.unitconversion;
 import android.os.Bundle;
 
 import android.support.v7.app.AppCompatActivity;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.SeekBar;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+import org.w3c.dom.Text;
 
-    EditText centimeters, meters, inches, feet;
-    Button submitButton;
+import java.text.NumberFormat;
+
+public class MainActivity extends AppCompatActivity
+        implements SeekBar.OnSeekBarChangeListener, TextWatcher {
+
+
+    private EditText centimeterConversion;
+    private EditText meterConversion;
+    private EditText InchesConversion;
+    private EditText footConversion;
+    private TextView percentageText;
+    private SeekBar percentageBar;
+    private Button submitButton;
+
+    private NumberFormat percentageFormatter = NumberFormat.getPercentInstance();
+    private NumberFormat unitFormatter = NumberFormat.getCurrencyInstance();
+
+    private double percentageValue;
+    private double afterPercentValue;
 
 
 
@@ -20,11 +40,26 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        centimeters = (EditText) findViewById(R.id.centimeterConversion);
-        meters = (EditText) findViewById(R.id.meterConversion);
-        inches = (EditText) findViewById(R.id.InchesConversion);
-        feet = (EditText) findViewById(R.id.footConversion);
+
+
+        centimeterConversion = (EditText) findViewById(R.id.centimeterConversion);
+
+        meterConversion = (EditText) findViewById(R.id.meterConversion);
+
+        InchesConversion = (EditText) findViewById(R.id.InchesConversion);
+
+        footConversion = (EditText) findViewById(R.id.footConversion);
+        percentageText = (TextView) findViewById(R.id.percentageText);
+        percentageBar = (SeekBar) findViewById(R.id.percentageBar);
         submitButton = (Button) findViewById(R.id.button);
+
+
+        percentageBar.setOnSeekBarChangeListener(this);
+
+//        centimeterConversion.addTextChangedListener(this);
+//        meterConversion.addTextChangedListener(this);
+//        InchesConversion.addTextChangedListener(this);
+//        footConversion.addTextChangedListener(this);
 
 
 
@@ -35,19 +70,85 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                double cm = Double.parseDouble(centimeters.getText().toString());
+                double cm = Double.parseDouble(centimeterConversion.getText().toString());
                 double m = cm / 100;
                 double inch = cm / 2.54;
                 double foot = inch / 12;
 
-                meters.setText("" + m);
-                inches.setText("" + inch);
-                feet.setText("" + foot);
+
+
+                meterConversion.setText("" + m);
+                InchesConversion.setText("" + inch);
+                footConversion.setText("" + foot);
+
 
 
             }
         });
 
     }
+
+    @Override
+    public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+        percentageValue = progress / 100.0;
+        percentageText.setText(percentageFormatter.format(percentageValue));
+
+
+
+
+
+
+
+    }
+
+    @Override
+    public void onStartTrackingTouch(SeekBar seekBar) {
+
+    }
+
+    @Override
+    public void onStopTrackingTouch(SeekBar seekBar) {
+
+    }
+
+    @Override
+    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+    }
+
+    @Override
+    public void onTextChanged(CharSequence text, int start, int before, int count) {
+        if (text.length() > 0) {
+            double value = Double.parseDouble(text.toString());
+            afterPercentValue = value / 100;
+            centimeterConversion.setText(unitFormatter.format(afterPercentValue));
+
+            double percentValue = afterPercentValue * percentageValue;
+
+            meterConversion.setText(unitFormatter.format(percentValue));
+            InchesConversion.setText(unitFormatter.format(percentValue));
+            footConversion.setText(unitFormatter.format(percentValue));
+        } else{
+
+            }
+
+        }
+
+
+
+
+
+
+
+
+
+
+    @Override
+    public void afterTextChanged(Editable s) {
+
+    }
+
+
 }
+
 
