@@ -24,14 +24,18 @@ public class MainActivity extends AppCompatActivity
     private EditText InchesConversion;
     private EditText footConversion;
     private TextView percentageText;
-    private SeekBar percentageBar;
-    private Button submitButton;
+    SeekBar percentageBar;
+    Button submitButton;
+
+
 
     private NumberFormat percentageFormatter = NumberFormat.getPercentInstance();
     private NumberFormat unitFormatter = NumberFormat.getCurrencyInstance();
 
     private double percentageValue;
     private double afterPercentValue;
+
+
 
 
 
