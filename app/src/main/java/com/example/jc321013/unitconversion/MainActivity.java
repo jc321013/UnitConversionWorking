@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         feet = (EditText) findViewById(R.id.footConversion);
         submitButton = (Button) findViewById(R.id.button);
 
-        
+
 
 
 
