@@ -27,7 +27,7 @@
         android:textSize="30sp" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/centimeterConversion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
@@ -43,7 +43,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
-        android:layout_below="@+id/editText"
+        android:layout_below="@+id/centimeterConversion"
         android:layout_columnWeight="1"
         android:layout_rowWeight="1"
         android:background="@color/colorPrimary"
@@ -53,7 +53,7 @@
         android:textSize="30sp" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/meterConversion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
@@ -62,8 +62,7 @@
         android:layout_rowWeight="1"
         android:background="@android:color/white"
 
-        android:inputType="textPersonName"
-        />
+        android:inputType="textPersonName" />
 
     <TextView
         android:id="@+id/textView8"
@@ -82,7 +81,7 @@
         android:textSize="30sp" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/InchesConversion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
@@ -91,8 +90,7 @@
         android:layout_rowWeight="1"
         android:background="@android:color/white"
 
-        android:inputType="textPersonName"
-       />
+        android:inputType="textPersonName" />
 
     <TextView
         android:id="@+id/textView9"
@@ -110,7 +108,7 @@
         android:textSize="30sp" />
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/footConversion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/textView9"
@@ -119,8 +117,7 @@
         android:layout_rowWeight="1"
         android:background="@android:color/white"
         android:elevation="5dp"
-        android:inputType="textPersonName"
-         />
+        android:inputType="textPersonName" />
 
     <Button
         android:id="@+id/button"

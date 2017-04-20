@@ -1,20 +1,16 @@
 package com.example.jc321013.unitconversion;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
 //import android.support.design.widget.FloatingActionButton;
 //import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText e1, e2, e3, e4;
+    EditText centimeters, meters, inches, feet;
     Button b1;
 
 
@@ -22,10 +18,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        e1 = (EditText) findViewById(R.id.editText);
-        e2 = (EditText) findViewById(R.id.editText2);
-        e3 = (EditText) findViewById(R.id.editText3);
-        e4 = (EditText) findViewById(R.id.editText4);
+        centimeters = (EditText) findViewById(R.id.centimeterConversion);
+        meters = (EditText) findViewById(R.id.meterConversion);
+        inches = (EditText) findViewById(R.id.InchesConversion);
+        feet = (EditText) findViewById(R.id.footConversion);
         b1 = (Button) findViewById(R.id.button);
 
         b1.setOnClickListener(new View.OnClickListener() {
@@ -33,14 +29,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                double cm = Double.parseDouble(e1.getText().toString());
+                double cm = Double.parseDouble(centimeters.getText().toString());
                 double m = cm / 100;
                 double inch = cm / 2.54;
                 double foot = inch / 12;
 
-                e2.setText("" + m);
-                e3.setText("" + inch);
-                e4.setText("" + foot);
+                meters.setText("" + m);
+                inches.setText("" + inch);
+                feet.setText("" + foot);
 
 
             }
