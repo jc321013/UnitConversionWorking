@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/UnitConversion.iml" filepath="$PROJECT_DIR$/UnitConversion.iml" />
       <module fileurl="file://$PROJECT_DIR$/UnitConversionWorking.iml" filepath="$PROJECT_DIR$/UnitConversionWorking.iml" />
+      <module fileurl="file://$PROJECT_DIR$/UnitConversionWorking.iml" filepath="$PROJECT_DIR$/UnitConversionWorking.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>

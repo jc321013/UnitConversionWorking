@@ -1,5 +1,7 @@
 package com.example.jc321013.unitconversion;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
 import android.support.v7.app.AppCompatActivity;
@@ -24,8 +26,10 @@ public class MainActivity extends AppCompatActivity
     private EditText InchesConversion;
     private EditText footConversion;
     private TextView percentageText;
+    private Context context;
     SeekBar percentageBar;
     Button submitButton;
+    private Button button2;
 
 
 
@@ -44,6 +48,16 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        context = this;
+        button2 = (Button) findViewById(R.id.button2);
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, Main2Activity.class);
+                startActivity(intent);
+
+            }
+        });
 
 
         centimeterConversion = (EditText) findViewById(R.id.centimeterConversion);
@@ -58,7 +72,9 @@ public class MainActivity extends AppCompatActivity
         submitButton = (Button) findViewById(R.id.button);
 
 
+
         percentageBar.setOnSeekBarChangeListener(this);
+
 
 //        centimeterConversion.addTextChangedListener(this);
 //        meterConversion.addTextChangedListener(this);
@@ -89,6 +105,8 @@ public class MainActivity extends AppCompatActivity
 
             }
         });
+
+
 
     }
 
