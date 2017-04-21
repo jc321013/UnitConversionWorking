@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:background="@android:color/darker_gray"
     android:columnCount="2"
-    android:rowCount="5"
+    android:rowCount="4"
     android:useDefaultMargins="true"
     tools:context="com.example.jc321013.unitconversion.MainActivity">
     <!--tools:showIn="@layout/activity_main"-->
@@ -91,29 +91,29 @@
 
         android:inputType="textPersonName|number" />
 
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_columnWeight="1"
-        android:layout_rowWeight="1"
-        android:background="@color/colorPrimary"
-        android:gravity="end"
-        android:text="Foot"
-        android:textAppearance="@android:style/TextAppearance.Large"
-        android:textSize="30sp" />
+    <!--<TextView-->
+        <!--android:id="@+id/textView9"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_columnWeight="1"-->
+        <!--android:layout_rowWeight="1"-->
+        <!--android:background="@color/colorPrimary"-->
+        <!--android:gravity="end"-->
+        <!--android:text="Foot"-->
+        <!--android:textAppearance="@android:style/TextAppearance.Large"-->
+        <!--android:textSize="30sp" />-->
 
-    <EditText
-        android:id="@+id/footConversion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/textView9"
-        android:layout_alignParentEnd="true"
-        android:layout_columnWeight="1"
-        android:layout_rowWeight="1"
-        android:background="@android:color/white"
-        android:elevation="5dp"
-        android:inputType="textPersonName|number" />
+    <!--<EditText-->
+        <!--android:id="@+id/footConversion"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignBottom="@+id/textView9"-->
+        <!--android:layout_alignParentEnd="true"-->
+        <!--android:layout_columnWeight="1"-->
+        <!--android:layout_rowWeight="1"-->
+        <!--android:background="@android:color/white"-->
+        <!--android:elevation="5dp"-->
+        <!--android:inputType="textPersonName|number" />-->
 
     <TextView
         android:id="@+id/percentageText"

@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity
     private EditText centimeterConversion;
     private EditText meterConversion;
     private EditText InchesConversion;
-    private EditText footConversion;
+//    private EditText footConversion;
     private TextView percentageText;
     private Context context;
     SeekBar percentageBar;
@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity
 
         InchesConversion = (EditText) findViewById(R.id.InchesConversion);
 
-        footConversion = (EditText) findViewById(R.id.footConversion);
+//        footConversion = (EditText) findViewById(R.id.footConversion);
         percentageText = (TextView) findViewById(R.id.percentageText);
         percentageBar = (SeekBar) findViewById(R.id.percentageBar);
         submitButton = (Button) findViewById(R.id.button);
@@ -93,13 +93,13 @@ public class MainActivity extends AppCompatActivity
                 double cm = Double.parseDouble(centimeterConversion.getText().toString());
                 double m = cm / 100;
                 double inch = cm / 2.54;
-                double foot = inch / 12;
+//                double foot = inch / 12;
 
 
 
                 meterConversion.setText("" + m);
                 InchesConversion.setText("" + inch);
-                footConversion.setText("" + foot);
+//                footConversion.setText("" + foot);
 
 
 
@@ -119,7 +119,7 @@ public class MainActivity extends AppCompatActivity
 
         meterConversion.setText(unitFormatter.format(percentValue));
         InchesConversion.setText(unitFormatter.format(percentValue));
-        footConversion.setText(unitFormatter.format(percentValue));
+//        footConversion.setText(unitFormatter.format(percentValue));
 
 
 
@@ -155,7 +155,7 @@ public class MainActivity extends AppCompatActivity
 
             meterConversion.setText(unitFormatter.format(percentValue));
             InchesConversion.setText(unitFormatter.format(percentValue));
-            footConversion.setText(unitFormatter.format(percentValue));
+//            footConversion.setText(unitFormatter.format(percentValue));
         } else{
 
             }

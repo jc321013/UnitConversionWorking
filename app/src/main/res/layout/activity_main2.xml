@@ -27,7 +27,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/statusText1" />
+        android:layout_below="@+id/statusText1"
+        android:inputType="number" />
 
     <TextView
         android:id="@+id/convertedText"

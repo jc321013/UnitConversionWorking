@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -21,6 +23,10 @@ public class Main2Activity extends AppCompatActivity{
     Button convert;
     Button back;
 
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,13 +37,55 @@ public class Main2Activity extends AppCompatActivity{
         convert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                double cm = Double.parseDouble(editTextConvert.getText().toString());
-                double foot = cm / 30.48;
+                double foot = Double.parseDouble(editTextConvert.getText().toString());
+                double cm = foot / 30.48;
 
-                convertedText.setText("" + foot);
+                convertedText.setText("" + cm);
             }
         });
+
+
+        editTextConvert = (EditText) findViewById(R.id.editTextConvert);
+        convertedText = (TextView) findViewById(R.id.convertedText);
+
+        convertedText.setText("Your Conversion is:");
+        editTextConvert.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence text, int start, int before, int count) {
+
+
+//                try {
+//                    int num = Integer.parseInt(string.toString());
+//                    double convertedNum = 0;
+//                    convertedNum = num / 0.0328084;
+//                    convertedText.setText("" + convertedNum + "feet");
+//
+//
+//            } catch (NumberFormatException e) {
+//                    e.printStackTrace();
+//                }
+
+                }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+
+
+
+
+
     }
+
+
 }
 
 //    private EditText edittextConvert;
