@@ -52,9 +52,8 @@
         android:id="@+id/back"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Back"
         android:layout_below="@+id/convert"
-         />
+        android:text="Back" />
 
 
 </RelativeLayout>

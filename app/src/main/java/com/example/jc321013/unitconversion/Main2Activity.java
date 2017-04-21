@@ -16,15 +16,12 @@ import android.widget.TextView;
  * Created by jc321013 on 21/04/2017.
  */
 
-public class Main2Activity extends AppCompatActivity{
+public class Main2Activity extends AppCompatActivity {
     private EditText editTextConvert;
     private TextView convertedText;
     private Context context;
     Button convert;
     Button back;
-
-
-
 
 
     @Override
@@ -37,6 +34,7 @@ public class Main2Activity extends AppCompatActivity{
         convert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+//                converts centimeters to feet in the setting page when convert is clicked and displays it in the text field
                 double foot = Double.parseDouble(editTextConvert.getText().toString());
                 double cm = foot / 30.48;
 
@@ -51,6 +49,7 @@ public class Main2Activity extends AppCompatActivity{
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+//                when back button is clicked it take suser back to main screen from settings page
 
                 Intent intent = new Intent(context, MainActivity.class);
                 startActivity(intent);
@@ -70,22 +69,15 @@ public class Main2Activity extends AppCompatActivity{
 
             @Override
             public void onTextChanged(CharSequence text, int start, int before, int count) {
-                
 
 
-
-
-                }
+            }
 
             @Override
             public void afterTextChanged(Editable s) {
 
             }
         });
-
-
-
-
 
 
     }

@@ -24,13 +24,11 @@ public class MainActivity extends AppCompatActivity
     private EditText centimeterConversion;
     private EditText meterConversion;
     private EditText InchesConversion;
-//    private EditText footConversion;
     private TextView percentageText;
     private Context context;
     SeekBar percentageBar;
     Button submitButton;
     private Button button2;
-
 
 
     private NumberFormat percentageFormatter = NumberFormat.getPercentInstance();
@@ -40,15 +38,12 @@ public class MainActivity extends AppCompatActivity
     private double afterPercentValue;
 
 
-
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         context = this;
+//        when the settings button is clicked it take user to new page
         button2 = (Button) findViewById(R.id.button2);
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,16 +56,11 @@ public class MainActivity extends AppCompatActivity
 
 
         centimeterConversion = (EditText) findViewById(R.id.centimeterConversion);
-
         meterConversion = (EditText) findViewById(R.id.meterConversion);
-
         InchesConversion = (EditText) findViewById(R.id.InchesConversion);
-
-//        footConversion = (EditText) findViewById(R.id.footConversion);
         percentageText = (TextView) findViewById(R.id.percentageText);
         percentageBar = (SeekBar) findViewById(R.id.percentageBar);
         submitButton = (Button) findViewById(R.id.button);
-
 
 
         percentageBar.setOnSeekBarChangeListener(this);
@@ -82,30 +72,22 @@ public class MainActivity extends AppCompatActivity
 //        footConversion.addTextChangedListener(this);
 
 
-
-
-
         submitButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-
+//converts centimeters to meters and inches and displays it in the text fields
                 double cm = Double.parseDouble(centimeterConversion.getText().toString());
                 double m = cm / 100;
                 double inch = cm / 2.54;
-//                double foot = inch / 12;
-
 
 
                 meterConversion.setText("" + m);
                 InchesConversion.setText("" + inch);
-//                footConversion.setText("" + foot);
-
 
 
             }
         });
-
 
 
     }
@@ -119,12 +101,6 @@ public class MainActivity extends AppCompatActivity
 
         meterConversion.setText(unitFormatter.format(percentValue));
         InchesConversion.setText(unitFormatter.format(percentValue));
-//        footConversion.setText(unitFormatter.format(percentValue));
-
-
-
-
-
 
 
     }
@@ -155,20 +131,12 @@ public class MainActivity extends AppCompatActivity
 
             meterConversion.setText(unitFormatter.format(percentValue));
             InchesConversion.setText(unitFormatter.format(percentValue));
-//            footConversion.setText(unitFormatter.format(percentValue));
-        } else{
 
-            }
+        } else {
 
         }
 
-
-
-
-
-
-
-
+    }
 
 
     @Override
