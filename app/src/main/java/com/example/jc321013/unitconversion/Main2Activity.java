@@ -19,7 +19,7 @@ import android.widget.TextView;
 public class Main2Activity extends AppCompatActivity{
     private EditText editTextConvert;
     private TextView convertedText;
-//    private Context context;
+    private Context context;
     Button convert;
     Button back;
 
@@ -41,6 +41,18 @@ public class Main2Activity extends AppCompatActivity{
                 double cm = foot / 30.48;
 
                 convertedText.setText("" + cm);
+
+
+            }
+        });
+
+        context = this;
+        back = (Button) findViewById(R.id.back);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, MainActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -59,16 +71,7 @@ public class Main2Activity extends AppCompatActivity{
             public void onTextChanged(CharSequence text, int start, int before, int count) {
 
 
-//                try {
-//                    int num = Integer.parseInt(string.toString());
-//                    double convertedNum = 0;
-//                    convertedNum = num / 0.0328084;
-//                    convertedText.setText("" + convertedNum + "feet");
-//
-//
-//            } catch (NumberFormatException e) {
-//                    e.printStackTrace();
-//                }
+
 
                 }
 
@@ -88,36 +91,4 @@ public class Main2Activity extends AppCompatActivity{
 
 }
 
-//    private EditText edittextConvert;
-//    private TextView convertedText;
-//    private Context context;
-//    Button convert;
-//    Button back;
-//
-//
-//    @Override
-//    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_main2);
-//
-//        edittextConvert = (EditText) findViewById(R.id.editTextConvert);
-//        convertedText = (TextView) findViewById(R.id.convertedText);
-//        convert = (Button) findViewById(R.id.convert);
-//        back = (Button) findViewById(R.id.back);
-//
-//        context = this;
-//        convert.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                double cm = Double.parseDouble(edittextConvert.getText().toString());
-//                double foot = cm / 30.48;
-//
-//                convertedText.setText("" + foot);
-//
-//
-//            }
-//        });
-//
-//
-//    }
 //}
