@@ -32,7 +32,7 @@ public class Main2Activity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
-//        context = this;
+
         convert = (Button) findViewById(R.id.convert);
         convert.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,7 +40,7 @@ public class Main2Activity extends AppCompatActivity{
                 double foot = Double.parseDouble(editTextConvert.getText().toString());
                 double cm = foot / 30.48;
 
-                convertedText.setText("" + cm);
+                convertedText.setText("" + cm + "feet");
 
 
             }
@@ -51,6 +51,7 @@ public class Main2Activity extends AppCompatActivity{
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Intent intent = new Intent(context, MainActivity.class);
                 startActivity(intent);
             }
@@ -69,6 +70,7 @@ public class Main2Activity extends AppCompatActivity{
 
             @Override
             public void onTextChanged(CharSequence text, int start, int before, int count) {
+                
 
 
 
